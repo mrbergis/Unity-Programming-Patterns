@@ -50,9 +50,12 @@
      <Compile Include="Assets/Patterns/Singleton/PersistentObjectSpawner.cs" />
      <Compile Include="Assets/Patterns/FSM/LocomotionFSM.cs" />
      <Compile Include="Assets/Patterns/FSM/LocomotionStatePattern.cs" />
+     <Compile Include="Assets/Patterns/ObjectPool/Bullet.cs" />
+     <Compile Include="Assets/Patterns/ObjectPool/Launcher.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Patterns/FSM" />
      <Folder Include="Assets/Scenes" />
+     <Folder Include="Assets/Patterns/ObjectPool" />
      <Folder Include="Assets/Patterns/Observer" />
      <Folder Include="Assets/Patterns/Singleton" />
      <Folder Include="Assets/Patterns" />
