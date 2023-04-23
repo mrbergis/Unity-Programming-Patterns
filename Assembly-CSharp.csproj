@@ -44,9 +44,13 @@
      <Compile Include="Assets/Patterns/Observer/Health.cs" />
      <Compile Include="Assets/Patterns/Observer/Level.cs" />
      <Compile Include="Assets/Patterns/Observer/Debugger.cs" />
+     <Compile Include="Assets/Patterns/Singleton/SceneReloader.cs" />
+     <Compile Include="Assets/Patterns/Singleton/AmbientAudioPlayer.cs" />
+     <Compile Include="Assets/Patterns/Singleton/AmbientAudioPlayerBehaviour.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/Patterns/Observer" />
+     <Folder Include="Assets/Patterns/Singleton" />
      <Folder Include="Assets/Patterns" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
