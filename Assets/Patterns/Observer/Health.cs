@@ -6,19 +6,19 @@ public class Health : MonoBehaviour {
     [SerializeField] float fullHealth = 100f;
     [SerializeField] float drainPerSecond = 2f;
     float currentHealth = 0;
-    
+
+    public event Action OnHealthChange;
+
     private void Awake() {
         ResetHealth();
         StartCoroutine(HealthDrain());
     }
-
-    private void OnEnable()
-    {
+    
+    private void OnEnable() {
         GetComponent<Level>().OnLevelUpAction += ResetHealth;
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
         GetComponent<Level>().OnLevelUpAction -= ResetHealth;
     }
 
@@ -27,9 +27,18 @@ public class Health : MonoBehaviour {
         return currentHealth;
     }
 
-    private void ResetHealth()
+    public float GetFullHealth()
+    {
+        return fullHealth;
+    }
+
+    void ResetHealth()
     {
         currentHealth = fullHealth;
+        if (OnHealthChange != null)
+        {
+            OnHealthChange();
+        }
     }
 
     private IEnumerator HealthDrain()
@@ -37,6 +46,10 @@ public class Health : MonoBehaviour {
         while (currentHealth > 0)
         {
             currentHealth -= drainPerSecond;
+            if (OnHealthChange != null)
+            {
+                OnHealthChange();
+            }
             yield return new WaitForSeconds(1);
         }
     }
