@@ -52,8 +52,10 @@
      <Compile Include="Assets/Patterns/FSM/LocomotionStatePattern.cs" />
      <Compile Include="Assets/Patterns/ObjectPool/Bullet.cs" />
      <Compile Include="Assets/Patterns/ObjectPool/Launcher.cs" />
+     <Compile Include="Assets/Patterns/SpecialAbilities/AbilityRunner.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Patterns/FSM" />
+     <Folder Include="Assets/Patterns/SpecialAbilities" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/Patterns/ObjectPool" />
      <Folder Include="Assets/Patterns/Observer" />
