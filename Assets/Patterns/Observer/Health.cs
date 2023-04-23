@@ -6,12 +6,12 @@ public class Health : MonoBehaviour {
     [SerializeField] float fullHealth = 100f;
     [SerializeField] float drainPerSecond = 2f;
     float currentHealth = 0;
-
+    
     private void Awake() {
         ResetHealth();
         StartCoroutine(HealthDrain());
     }
-
+    
     public float GetHealth()
     {
         return currentHealth;

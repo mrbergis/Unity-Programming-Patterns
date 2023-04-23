@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class Level : MonoBehaviour {
 
     [SerializeField] int pointsPerLevel = 200;
+    [SerializeField] private UnityEvent onLevelUp;
     int experiencePoints = 0;
 
     IEnumerator Start()
@@ -18,7 +19,12 @@ public class Level : MonoBehaviour {
 
     public void GainExperience(int points)
     {
+        int level = GetLevel();
         experiencePoints += points;
+        if (GetLevel() > level)
+        {
+            onLevelUp.Invoke();
+        }
     }
 
     public int GetExperience()
