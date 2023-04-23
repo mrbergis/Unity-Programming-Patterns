@@ -11,13 +11,23 @@ public class Health : MonoBehaviour {
         ResetHealth();
         StartCoroutine(HealthDrain());
     }
-    
+
+    private void OnEnable()
+    {
+        GetComponent<Level>().OnLevelUpAction += ResetHealth;
+    }
+
+    private void OnDisable()
+    {
+        GetComponent<Level>().OnLevelUpAction -= ResetHealth;
+    }
+
     public float GetHealth()
     {
         return currentHealth;
     }
 
-    public void ResetHealth()
+    private void ResetHealth()
     {
         currentHealth = fullHealth;
     }

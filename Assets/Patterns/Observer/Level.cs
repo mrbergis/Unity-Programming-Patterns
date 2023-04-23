@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,8 +7,13 @@ public class Level : MonoBehaviour {
 
     [SerializeField] int pointsPerLevel = 200;
     [SerializeField] private UnityEvent onLevelUp;
-    int experiencePoints = 0;
+    int _experiencePoints = 0;
 
+
+    //public delegate void CallbackType();
+    //public event CallbackType OnLevelUpAction;
+    public event Action OnLevelUpAction;
+    
     IEnumerator Start()
     {
         while (true)
@@ -20,20 +26,21 @@ public class Level : MonoBehaviour {
     public void GainExperience(int points)
     {
         int level = GetLevel();
-        experiencePoints += points;
+        _experiencePoints += points;
         if (GetLevel() > level)
         {
             onLevelUp.Invoke();
+            OnLevelUpAction?.Invoke();
         }
     }
 
     public int GetExperience()
     {
-        return experiencePoints;
+        return _experiencePoints;
     }
 
     public int GetLevel()
     {
-        return experiencePoints / pointsPerLevel;
+        return _experiencePoints / pointsPerLevel;
     }
 }
