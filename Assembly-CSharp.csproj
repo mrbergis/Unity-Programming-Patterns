@@ -49,6 +49,7 @@
      <Compile Include="Assets/Patterns/Singleton/AmbientAudioPlayerBehaviour.cs" />
      <Compile Include="Assets/Patterns/Singleton/PersistentObjectSpawner.cs" />
      <Compile Include="Assets/Patterns/FSM/LocomotionFSM.cs" />
+     <Compile Include="Assets/Patterns/FSM/LocomotionStatePattern.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Patterns/FSM" />
      <Folder Include="Assets/Scenes" />
