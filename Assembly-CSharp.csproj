@@ -47,6 +47,7 @@
      <Compile Include="Assets/Patterns/Singleton/SceneReloader.cs" />
      <Compile Include="Assets/Patterns/Singleton/AmbientAudioPlayer.cs" />
      <Compile Include="Assets/Patterns/Singleton/AmbientAudioPlayerBehaviour.cs" />
+     <Compile Include="Assets/Patterns/Singleton/PersistentObjectSpawner.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/Patterns/Observer" />
